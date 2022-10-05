@@ -1,10 +1,10 @@
-import React from 'react'; 
 import Job from './Job';
 import data from '../data.json';
+import React from 'react';
 
-function JobList() {
+function JobList({ filterActive }) {
   return(
-    <div className='job-list'>
+    <div className={filterActive ? 'job-list add-padding' : 'job-list'}>
       {data.map( job => {
         return (<Job companyLogo={job.logo}
         companyName={job.company}
@@ -17,8 +17,7 @@ function JobList() {
         jobLangs={job.languages}
         jobTools={job.tools} 
         key={job.id}
-        id={job.id}/>)
-        })
+        id={job.id} />)})
       } 
     </div>
   );
