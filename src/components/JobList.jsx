@@ -15,6 +15,7 @@ function JobList({ filterActive }) {
         workTime={job.contract}
         jobLocation={job.location}
         jobRole={job.role}
+        jobLevel={job.level}
         jobLangs={job.languages}
         jobTools={job.tools} 
         key={job.id}

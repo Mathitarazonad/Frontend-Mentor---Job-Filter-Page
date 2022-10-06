@@ -34,6 +34,7 @@ function Job (props) {
       <hr></hr>
       <div className='job-tags'>
         <h3 className='tag'>{props.jobRole}</h3>
+        <h3 className='tag'>{props.jobLevel}</h3>
         {props.jobLangs.map(lang => {
           return (<h3 className='tag'>{lang}</h3>)
         })}
