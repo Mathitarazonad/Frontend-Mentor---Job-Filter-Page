@@ -1,18 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
 
-function TagFilter ( {selectedTags} ) {
-
-  const [active, setActive] = useState(false);
+function TagFilter ({ selectedTags, filterActive, handleClearBtn, handleDeleteTag }) {
 
   return (
-    <div className={active ? 'filter-container filter-active' : 'filter-container'}>
-      { selectedTags.map( tag => {
-        return (<div className={'selected-tag-container'} id={tag} key={tag}> 
+    <div className={filterActive ? 'filter-container filter-active' : 'filter-container'}>
+      <div className='selected-tags'>
+        { selectedTags.map( tag => {
+        return (<div className={'tag-container'} id={tag} key={tag}> 
           <h4>{tag}</h4>
-          <img src='./images/icon-remove.svg' alt='remove'/>
+          <div className='tag-close'>
+            <img src='./images/icon-remove.svg' alt='remove'  onClick={() => handleDeleteTag(tag)}/>
+          </div>
         </div>)
-      }) }
+        }) }
+      </div>
+      <h4 id='clear-btn' onClick={() => handleClearBtn}>Clear</h4>
     </div>
   );
 }
