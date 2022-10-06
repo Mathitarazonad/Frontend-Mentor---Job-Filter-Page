@@ -14,7 +14,7 @@ function TagFilter ({ selectedTags, filterActive, handleClearBtn, handleDeleteTa
         </div>)
         }) }
       </div>
-      <h4 id='clear-btn' onClick={() => handleClearBtn}>Clear</h4>
+      <h4 id='clear-btn' onClick={() => handleClearBtn()}>Clear</h4>
     </div>
   );
 }
