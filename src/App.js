@@ -18,7 +18,21 @@ function App() {
 
   function handleDeleteTag (tag) {
     let updatedSelectedTags = selectedTags.filter(selectedTag => selectedTag != tag);
-    setSelectedTags(updatedSelectedTags);
+    if (!updatedSelectedTags.length >= 1) {
+      setSelectedTags(updatedSelectedTags);
+      setFilterActive(false);
+    } else {
+      setSelectedTags(updatedSelectedTags)
+    }
+    
+  }
+
+  function addSelectedTag(tag) {
+    if (!selectedTags.includes(tag)) {
+      let updatedSelectedTags = [...selectedTags, tag];
+      setSelectedTags(updatedSelectedTags);
+      setFilterActive(true);
+    }
   }
 
   return (
@@ -34,7 +48,8 @@ function App() {
         handleClearBtn={handleClearBtn}
         handleDeleteTag={handleDeleteTag} />
         <JobList filterActive={filterActive} 
-        jobs={availableJobs}/>
+        jobs={availableJobs}
+        addSelectedTag={addSelectedTag} />
       </div> 
       :<div className='empty-jobs'>
         <h2>No Jobs Available!</h2>
@@ -44,8 +59,6 @@ function App() {
         <TbMoodSad className='empty-mood'/>
       </div>}
     </div>
-      
-
   );
 }
 

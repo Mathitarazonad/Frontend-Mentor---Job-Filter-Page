@@ -33,13 +33,13 @@ function Job (props) {
       </div>
       <hr></hr>
       <div className='job-tags'>
-        <h3 className='tag'>{props.jobRole}</h3>
-        <h3 className='tag'>{props.jobLevel}</h3>
+        <h3 className='tag' onClick={ () => props.addSelectedTag(props.jobRole)}>{props.jobRole}</h3>
+        <h3 className='tag' onClick={ () => props.addSelectedTag(props.jobLevel)}>{props.jobLevel}</h3>
         {props.jobLangs.map(lang => {
-          return (<h3 className='tag'>{lang}</h3>)
+          return (<h3 className='tag' onClick={ () => props.addSelectedTag(lang)}>{lang}</h3>)
         })}
         {props.jobTools.map(tool => {
-          return (<h3 className='tag'>{tool}</h3>)
+          return (<h3 className='tag' onClick={ () => props.addSelectedTag(tool)}>{tool}</h3>)
         })}
       </div>
     </div>
