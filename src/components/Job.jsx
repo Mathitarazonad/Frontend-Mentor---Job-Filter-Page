@@ -1,4 +1,5 @@
 import React from 'react';
+import { VscDebugStackframeDot } from 'react-icons/vsc';
 
 function Job (props) {
   return(
@@ -10,12 +11,12 @@ function Job (props) {
           <div className=
           'other-tags' style={{display: props.isNew || props.isFeatured ? 'flex' : 'none'}}>
             <h4 
-            className='new-job' 
+            className='new-tag' 
             style={{display: props.isNew ? 'initial' : 'none'}}>
               NEW!
             </h4>
             <h4
-              className='featured-job' 
+              className='featured-tag' 
               style={{display: props.isFeatured ? 'flex' : 'none'}}>
                 FEATURED
             </h4>
@@ -24,12 +25,15 @@ function Job (props) {
         <h2 className='company-job'>{props.companyJob}</h2>
         <div className='job-details'>
           <h5>{props.post}</h5>
+          <VscDebugStackframeDot />
           <h5>{props.workTime}</h5>
+          <VscDebugStackframeDot />
           <h5>{props.jobLocation}</h5>
         </div>
       </div>
       <hr></hr>
       <div className='job-tags'>
+        <h3 className='tag'>{props.jobRole}</h3>
         {props.jobLangs.map(lang => {
           return (<h3 className='tag'>{lang}</h3>)
         })}

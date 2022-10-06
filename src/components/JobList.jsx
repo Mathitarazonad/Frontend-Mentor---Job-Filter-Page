@@ -10,10 +10,11 @@ function JobList({ filterActive }) {
         companyName={job.company}
         isNew={job.new}
         isFeatured={job.featured}
-        companyJob={job.role}
+        companyJob={job.position}
         post={job.postedAt}
         workTime={job.contract}
         jobLocation={job.location}
+        jobRole={job.role}
         jobLangs={job.languages}
         jobTools={job.tools} 
         key={job.id}
