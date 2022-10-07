@@ -17,6 +17,11 @@
 --Margin: 1.2rem;
 }
 
+body {
+  height: 100vh;
+  background-color: var(--Background);
+}
+
 /* Desktop bg desactivated in mobile */
 .desktop-bg {
   display: none;
@@ -29,6 +34,8 @@
 
 .main-container {
   background-color: var(--Background);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Job filter */
@@ -45,10 +52,8 @@
   height: auto;
   border-radius: 6px;
   background-color: white;
-  position: absolute;
-  top: 100px;
-  left: 0; right: 0;
   box-shadow: 0 2px 40px 1px hsla(180, 29%, 50%, 0.411);
+  margin-top: -2rem;
 }
 
 .selected-tags {
@@ -104,16 +109,12 @@
 
 /* Job List */
 .job-list {
-  padding-top: 50px;
+  padding: 35px 0;
   margin-left: var(--Margin);
   margin-right: var(--Margin);
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-.job-list.add-padding {
-  padding-top: 120px;
 }
 
 /* Job Card */

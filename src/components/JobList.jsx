@@ -1,9 +1,9 @@
 import Job from './Job';
 import React from 'react';
 
-function JobList({ filterActive, jobs, addSelectedTag }) {
+function JobList({ jobs, addSelectedTag }) {
   return(
-    <div className={filterActive ? 'job-list add-padding' : 'job-list'}>
+    <div className='job-list'>
       {jobs.map( job => {
         return (<Job companyLogo={job.logo}
         companyName={job.company}

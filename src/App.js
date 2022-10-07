@@ -63,7 +63,7 @@ function App() {
         selectedTags={selectedTags} filterActive={filterActive} 
         handleClearBtn={handleClearBtn}
         handleDeleteTag={handleDeleteTag} />
-        <JobList filterActive={filterActive} 
+        <JobList 
         jobs={availableJobs}
         addSelectedTag={addSelectedTag} />
       </div> 
@@ -79,6 +79,3 @@ function App() {
 }
 
 export default App;
-
-// Falta actualizar el css para que la lista se baje bien
-// Falta estilos para tablet y computadora
