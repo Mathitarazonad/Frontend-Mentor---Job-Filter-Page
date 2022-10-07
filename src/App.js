@@ -2,8 +2,8 @@ import './App.css';
 import React, { useState } from 'react';
 import JobList from './components/JobList';
 import TagFilter from './components/TagFilter';
-import data from './data.json'
-import { TbMoodSad } from 'react-icons/tb'
+import data from './data.json';
+import { TbMoodSad } from 'react-icons/tb';
 
 function App() {
 
@@ -14,15 +14,19 @@ function App() {
   function handleClearBtn () {
     setFilterActive(false);
     setSelectedTags([]);
+    setAvailableJobs(data);
   }
 
   function handleDeleteTag (tag) {
     let updatedSelectedTags = selectedTags.filter(selectedTag => selectedTag != tag);
+
     if (!updatedSelectedTags.length >= 1) {
       setSelectedTags(updatedSelectedTags);
       setFilterActive(false);
+      setAvailableJobs(data);
     } else {
-      setSelectedTags(updatedSelectedTags)
+      setSelectedTags(updatedSelectedTags);
+      updateAvailableJobs(updatedSelectedTags);
     }
     
   }
@@ -31,9 +35,21 @@ function App() {
     if (!selectedTags.includes(tag)) {
       let updatedSelectedTags = [...selectedTags, tag];
       setSelectedTags(updatedSelectedTags);
-      setFilterActive(true);
+      setFilterActive(true); 
+      updateAvailableJobs(updatedSelectedTags);
     }
   }
+
+  function updateAvailableJobs(tags) {
+    let updatedJobs = [...data];
+
+    tags.forEach(tag=> {
+      updatedJobs = updatedJobs.filter(job => job.languages.includes(tag) || job.tools.includes(tag) || job.level == tag || job.role == tag)  
+    });
+
+    setAvailableJobs(updatedJobs);
+  }
+
 
   return (
     <div className='App'>
@@ -54,7 +70,7 @@ function App() {
       :<div className='empty-jobs'>
         <h2>No Jobs Available!</h2>
         <TagFilter 
-          selectedTags={['Frontend', 'CSS', 'JavaScript']} filterActive={filterActive}
+          selectedTags={selectedTags} filterActive={filterActive}
           handleClearBtn={handleClearBtn} />
         <TbMoodSad className='empty-mood'/>
       </div>}
@@ -64,4 +80,5 @@ function App() {
 
 export default App;
 
-//KeepCoding
+// Falta actualizar el css para que la lista se baje bien
+// Falta estilos para tablet y computadora
