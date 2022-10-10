@@ -36,10 +36,10 @@ function Job (props) {
         <h3 className='tag' onClick={ () => props.addSelectedTag(props.jobRole)}>{props.jobRole}</h3>
         <h3 className='tag' onClick={ () => props.addSelectedTag(props.jobLevel)}>{props.jobLevel}</h3>
         {props.jobLangs.map(lang => {
-          return (<h3 className='tag' onClick={ () => props.addSelectedTag(lang)}>{lang}</h3>)
+          return (<h3 className='tag'key={lang} onClick={ () => props.addSelectedTag(lang)}>{lang}</h3>)
         })}
         {props.jobTools.map(tool => {
-          return (<h3 className='tag' onClick={ () => props.addSelectedTag(tool)}>{tool}</h3>)
+          return (<h3 className='tag'key={tool} onClick={ () => props.addSelectedTag(tool)}>{tool}</h3>)
         })}
       </div>
     </div>
