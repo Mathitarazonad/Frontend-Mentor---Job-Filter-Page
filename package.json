@@ -2,7 +2,7 @@
   "name": "jobs-list-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mathitarazonad.github.io/Frontend-Mentor---Job-Filter-Page/",
+  "homepage": "http://mathitarazonad.github.io/Frontend-Mentor---Job-Filter-Page/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
