@@ -8,8 +8,8 @@ function TagFilter ({ selectedTags, filterActive, handleClearBtn, handleDeleteTa
         { selectedTags.map( tag => {
         return (<div className={'tag-container'} id={tag} key={tag}> 
           <h4>{tag}</h4>
-          <div className='tag-close'>
-            <img src='./images/icon-remove.svg' alt='remove'  onClick={() => handleDeleteTag(tag)}/>
+          <div className='tag-close' onClick={() => handleDeleteTag(tag)}>
+            <img src='./images/icon-remove.svg' alt='remove'/>
           </div>
         </div>)
         }) }
