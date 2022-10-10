@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Mathitarazonad/Frontend-Mentor---Job-Filter-Page
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://mathitarazonad.github.io/job-filter-page/
 
 ## My process
 
