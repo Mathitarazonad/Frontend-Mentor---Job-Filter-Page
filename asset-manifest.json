@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Frontend-Mentor---Job-Filter-Page/static/css/main.4fd01cb9.css",
+    "main.js": "/Frontend-Mentor---Job-Filter-Page/static/js/main.5d3649ea.js",
+    "index.html": "/Frontend-Mentor---Job-Filter-Page/index.html",
+    "main.4fd01cb9.css.map": "/Frontend-Mentor---Job-Filter-Page/static/css/main.4fd01cb9.css.map",
+    "main.5d3649ea.js.map": "/Frontend-Mentor---Job-Filter-Page/static/js/main.5d3649ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fd01cb9.css",
+    "static/js/main.5d3649ea.js"
+  ]
+}
