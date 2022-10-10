@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Frontend-Mentor---Job-Filter-Page/public/static/css/main.4fd01cb9.css",
-    "main.js": "/Frontend-Mentor---Job-Filter-Page/public/static/js/main.5d3649ea.js",
-    "index.html": "/Frontend-Mentor---Job-Filter-Page/public/index.html",
-    "main.4fd01cb9.css.map": "/Frontend-Mentor---Job-Filter-Page/public/static/css/main.4fd01cb9.css.map",
-    "main.5d3649ea.js.map": "/Frontend-Mentor---Job-Filter-Page/public/static/js/main.5d3649ea.js.map"
+    "main.css": "/job-filter-page/static/css/main.4fd01cb9.css",
+    "main.js": "/job-filter-page/static/js/main.5d3649ea.js",
+    "index.html": "/job-filter-page/index.html",
+    "main.4fd01cb9.css.map": "/job-filter-page/static/css/main.4fd01cb9.css.map",
+    "main.5d3649ea.js.map": "/job-filter-page/static/js/main.5d3649ea.js.map"
   },
   "entrypoints": [
     "static/css/main.4fd01cb9.css",
